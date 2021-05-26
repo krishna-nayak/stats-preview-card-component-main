@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(233, 47%, 7%);
+    font-family: "Inter", sans-serif;
+    /* font-family: 'Lexend Deca', sans-serif; */
+    font-size: 15px;
+    height: 100vh;
+    line-height: 1.2;
+    display: grid;
+    place-items: center;
+}
+.container {
+    max-width: 1440px;
+    width: 75vw;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+}
+
+.details {
+    padding: 50px;
+    height: 100%;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 10px 0px 0px 10px;
+}
+
+.details h1 {
+    padding: 20px 0;
+    font-size: 2.5rem;
+    color: hsl(0, 0%, 100%);
+}
+
+.details h1 span {
+    color: hsl(277, 64%, 61%);
+}
+
+.details p {
+    padding: 20px 0;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: "Lexend Deca", sans-serif;
+    line-height: 1.5;
+}
+
+.image-contianer {
+    border-radius: 0 10px 10px 0;
+    position: relative;
+    background-image: url("images/image-header-desktop.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.feature {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature span {
+    font-size: 1.2rem;
+    display: block;
+    color: hsl(0, 0%, 100%);
+}
+.feature p {
+    font-size: 15px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.image-contianer .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(158, 59, 219, 0.6);
+}
