@@ -8,16 +8,16 @@
 body {
     background-color: hsl(233, 47%, 7%);
     font-family: "Inter", sans-serif;
-    /* font-family: 'Lexend Deca', sans-serif; */
     font-size: 15px;
     height: 100vh;
     line-height: 1.2;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .container {
     max-width: 1440px;
-    width: 75vw;
+    width: 1090px;
     border-radius: 10px;
 
     display: grid;
@@ -30,6 +30,7 @@ body {
     height: 100%;
     background-color: hsl(244, 38%, 16%);
     border-radius: 10px 0px 0px 10px;
+    position: relative;
 }
 
 .details h1 {
@@ -49,15 +50,6 @@ body {
     line-height: 1.5;
 }
 
-.image-contianer {
-    border-radius: 0 10px 10px 0;
-    position: relative;
-    background-image: url("images/image-header-desktop.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    overflow: hidden;
-}
-
 .feature {
     padding: 10px 0;
     display: flex;
@@ -75,6 +67,15 @@ body {
     text-transform: uppercase;
 }
 
+.image-contianer {
+    border-radius: 0 10px 10px 0;
+    position: relative;
+    background-image: url("images/image-header-desktop.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
 .image-contianer .overlay {
     position: absolute;
     top: 0;
@@ -82,4 +83,45 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(158, 59, 219, 0.6);
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 850px;
+    }
+}
+
+@media (max-width: 950px) {
+    body {
+        height: auto;
+    }
+    .container {
+        max-width: 400px;
+        width: 80vw;
+        height: 100%;
+
+        margin: 100px 0;
+        justify-content: space-between;
+    }
+    .details h1 {
+        font-size: 1.5rem;
+    }
+
+    .details {
+        grid-column: span 2;
+        height: fit-content;
+        padding: 25px;
+        text-align: center;
+    }
+    .feature {
+        flex-direction: column;
+    }
+
+    .image-contianer {
+        grid-column: span 2;
+        grid-row: 1/2;
+
+        min-height: 300px;
+        background-image: url("images/image-header-mobile.jpg");
+    }
 }
